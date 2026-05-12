@@ -47,7 +47,7 @@ export default function QuizApp() {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const res = await fetch("http://127.0.0.1:8000/api/questions/");
+        const res = await fetch("https://quiz-backend-pmfo.onrender.com/api/questions/");
         if (!res.ok) throw new Error(`Server error: ${res.status}`);
         const data = await res.json();
         const transformed = data.map(q => ({
